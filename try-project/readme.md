@@ -1,0 +1,1 @@
+This folder contains a practical project I built as part of learning. The goal of this project is to apply the concepts, tools, and techniques taught in the course to create a functional and meaningful application.
