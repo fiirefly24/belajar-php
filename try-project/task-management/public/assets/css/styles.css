@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  height: 100dvh;
+}
+
+.form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.login-form {
+  display: block;
+}
+
+.register-form {
+  display: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  width: 80dvw;
+  height: 50dvh;
+  overflow: hidden;
+  background-color: #fdfdfd;
+  margin: 15dvh auto;
+  border: 1px solid #333;
+  border-radius: 30px;
+}
+
+.form-band {
+  background-color: #333;
+  height: 4dvh;
+}
+
+#task-form,
+#task-form-title {
+  visibility: hidden;
+  opacity: 0;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.3rem 1.4rem;
+  text-align: left;
+  align-self: flex-start;
+}
+
+input,
+select,
+textarea {
+  width: 90%;
+  min-height: 2em;
+  text-align: left;
+  font-size: small;
+}
+
+select {
+  border: 0;
+  background-color: #dddddd;
+  padding-left: 11px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #616161;
+}
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 1em;
+  border: 0;
+  color: white;
+  background-color: #333;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease-out;
+}
+
+.loader.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loader.inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #4caf50;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1em;
+  animation: spin 1s linear infinite forwards;
+}
+
+#task-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70dvh;
+  margin: 0 auto;
+  width: 80%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

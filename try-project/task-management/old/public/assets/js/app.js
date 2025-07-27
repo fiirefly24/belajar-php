@@ -1,26 +1,51 @@
-document.addEventListener("DOMContentLoaded", function () {
-  let taskForm = document.getElementById("task-form");
-  let taskFormOrig = document.getElementById("task-form");
-  let table = document.getElementById("table");
-  let tableOrig = document.getElementById("table");
-  let mainTable = document.getElementById("main-table");
-  let mainTask = document.getElementById("main-task");
+// Transition Form
+const loginFormState = true;
+function collapse() {
+  const login = document.getElementById("login-form");
+  const register = document.getElementById("register-form");
+  const formContainer = document.getElementById("form-container");
+  const band = document.getElementById("form-band");
 
-  const loader = document.getElementById("loader");
-
-  // Show only if not seen yet
-  if (!localStorage.getItem("loaderShown")) {
-    loader.classList.add("active");
-    localStorage.setItem("loaderShown", "true");
+  function changeState() {
+    return (loginFormState = !loginFormState);
   }
 
-  // Always hide after 2 seconds (or when DOM is ready)
-  setTimeout(() => {
-    taskForm.remove();
-    loader.classList.remove("active");
-    loader.classList.add("inactive");
-  }, 200);
+  if (loginFormState) {
+    // formContainer.style.flexDirection = "column-reverse";
+    formContainer.style.justifyContent = "space-around";
+    login.style.display = "none";
+    register.style.display = "block";
+    register.style.marginTop = "0.9dvh";
+    band.style.marginTop = "8.4dvh";
+    changeState();
+    return;
+  }
 
+  if (!loginFormState) {
+    formContainer.style.flexDirection = "column";
+    formContainer.style.justifyContent = "space-between";
+    login.style.display = "block";
+    register.style.display = "none";
+    band.style.marginTop = "0";
+    changeState();
+    return;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".task-card");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", function () {
+      const details = this.querySelector(".task-details");
+      if (details.style.display === "none") {
+        details.style.display = "block";
+      } else {
+        details.style.display = "none";
+      }
+    });
+  });
+  // views/layout.php
   // mob-menu
   const menu = document.getElementById("mob-menu");
   const icoMenu = document.getElementById("icon-mob-menu");
@@ -114,22 +139,17 @@ document.addEventListener("DOMContentLoaded", function () {
       form.style.visibility = "visible";
       formTitle.style.opacity = 1;
       formTitle.style.visibility = "visible";
-      mainTask.appendChild(taskFormOrig);
-      table.remove();
-      table = tableOrig;
     } else {
       getInputState();
       icoInput.style.transition = "all 0.4s linear";
       icoInput.style.transform = "rotate(0deg)";
       form.style.transition = "all 0.2s ease-out";
       formTitle.style.transition = "all 0.2s ease-out";
+      form.style.opacity = 0;
       form.style.visibility = "hidden";
       formTitle.style.opacity = 0;
       formTitle.style.visibility = "hidden";
-      mainTable.appendChild(tableOrig);
-      taskForm.remove();
-      taskForm = taskFormOrig;
-      form.style.opacity = 0;
     }
   });
+  // views/dashboard.php (User)
 });

@@ -1,0 +1,105 @@
+[
+  {
+    "id": 1,
+    "title": "Fix printer",
+    "description": "Printer isn't printing after update",
+    "status": "pending",
+    "submittedBy": "Ammad",
+    "assignedTo": null,
+    "createdAt": "2025-04-06T10:30:00"
+  },
+  {
+    "id": 2,
+    "title": "Laptop won\u2019t turn on",
+    "description": "Dell Latitude won't power up even with charger plugged in",
+    "status": "processing",
+    "submittedBy": "John",
+    "assignedTo": "Admin",
+    "createdAt": "2025-04-05T14:20:00"
+  },
+  {
+    "id": 3,
+    "title": "Can't connect to WiFi",
+    "description": "No network connection on floor 3",
+    "status": "pending",
+    "submittedBy": "Sarah",
+    "assignedTo": null,
+    "createdAt": "2025-04-05T09:15:00"
+  },
+  {
+    "id": 4,
+    "title": "Broken projector",
+    "description": "Projector in Room 5 doesn't turn on",
+    "status": "completed",
+    "submittedBy": "Udins",
+    "assignedTo": "Admin",
+    "createdAt": "2025-04-04T12:00:00",
+    "completedAt": "2025-04-05T14:30:00"
+  },
+  {
+    "id": 5,
+    "title": "Slow internet",
+    "description": "Very slow speed in Sales department",
+    "status": "processing",
+    "submittedBy": "Ucok",
+    "assignedTo": "Admin",
+    "createdAt": "2025-04-03T08:45:00"
+  },
+  {
+    "id": 6,
+    "title": "Email not working",
+    "description": "Outlook not syncing emails",
+    "status": "pending",
+    "submittedBy": "Lisa",
+    "assignedTo": null,
+    "createdAt": "2025-04-03T11:20:00"
+  },
+  {
+    "id": 7,
+    "title": "Keyboard not working",
+    "description": "Wireless keyboard keeps disconnecting",
+    "status": "pending",
+    "submittedBy": "Daniel",
+    "assignedTo": null,
+    "createdAt": "2025-04-02T15:00:00"
+  },
+  {
+    "id": 8,
+    "title": "Login failed",
+    "description": "Can't log in to internal system",
+    "status": "completed",
+    "submittedBy": "Emily",
+    "assignedTo": "Admin",
+    "createdAt": "2025-04-01T10:30:00",
+    "completedAt": "2025-04-02T11:00:00"
+  },
+  {
+    "id": 9,
+    "title": "Application crash",
+    "description": "CRM app crashes when trying to export reports",
+    "status": "pending",
+    "submittedBy": "James",
+    "assignedTo": null,
+    "createdAt": "2025-03-31T13:45:00"
+  },
+  {
+    "id": 10,
+    "title": "New monitor request",
+    "description": "Request for new monitor for developer team",
+    "status": "processing",
+    "submittedBy": "Robert",
+    "assignedTo": "Admin",
+    "createdAt": "2025-03-30T09:00:00"
+  },
+  {
+    "id": 11,
+    "title": "Test",
+    "category": "software",
+    "priority": "medium",
+    "description": "Request for new monitor for developer team",
+    "status": "pending",
+    "submittedBy": "Ucok",
+    "assignedTo": "Admin",
+    "createdAt": "2025-07-23 01:14:58"
+  }
+]

@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+@media only screen and (min-width: 320px) {
+  nav {
+    height: 6dvh;
+  }
+
+  nav h1 {
+    font-size: x-large;
+  }
+
+  footer {
+    height: 3dvh;
+  }
+
+  .nav-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #575656;
+    border-radius: 90px;
+    width: 12dvw;
+    height: 5.5dvh;
+  }
+
+  .mob-menu {
+    position: absolute;
+    bottom: 15dvh;
+    left: 5dvw;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 12dvw;
+    height: 5.5dvh;
+    transition: all 0.3s ease;
+  }
+
+  .mob-menu svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .mob-input {
+    position: absolute;
+    bottom: 15dvh;
+    right: 5dvw;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 12dvw;
+    height: 5.5dvh;
+  }
+
+  .mob-input svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .proIcon {
+    position: relative;
+    margin-left: 5vw;
+    fill: white;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  height: 100dvh;
+}
+
+h1,
+p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #333;
+  color: white;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #333;
+  color: white;
+  font-size: smaller;
+  padding: 30px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+nav a {
+  position: absolute;
+  right: 5dvw;
+  font-size: small;
+  color: white;
+  text-decoration: none;
+}
+
+nav h1 {
+  margin-left: 2dvw;
+}
+
+.form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.login-form {
+  display: block;
+}
+
+.register-form {
+  display: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  width: 80dvw;
+  height: 50dvh;
+  overflow: hidden;
+  background-color: #fdfdfd;
+  margin: 15dvh auto;
+  border: 1px solid #333;
+  border-radius: 30px;
+}
+
+.form-band {
+  background-color: #333;
+  height: 4dvh;
+}
+
+#task-form,
+#task-form-title {
+  visibility: hidden;
+  opacity: 0;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.3rem 1rem;
+  text-align: left;
+}
+
+input,
+select,
+textarea {
+  width: 90%;
+  min-height: 2em;
+}
+
+select {
+  border: 0;
+  background-color: #dddddd;
+  padding-left: 11px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #616161;
+}
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 1em;
+  border: 0;
+  color: white;
+  background-color: #333;
+}
+
+.task-container {
+  max-height: 60dvh;
+  overflow-y: auto;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.task-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1em;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-header {
+  font-weight: bold;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-details {
+  display: none;
+  margin-top: 1em;
+  font-size: 0.95em;
+}
